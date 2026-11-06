@@ -1,0 +1,108 @@
+/* Modal mayor de edad */
+
+body.sjb-mayor-edad-abierto {
+    overflow: hidden;
+}
+
+.modal-mayor-edad {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-mayor-edad .modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40vw;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.modal-mayor-edad .modal-content .titulo {
+    font-size: 2.5em;
+    line-height: normal;
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-mayor-edad .modal-content .subtitulo {
+    font-size: large;
+    margin-top: 1em;
+}
+
+.modal-mayor-edad .modal-buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.modal-mayor-edad .modal-content .btn {
+    color: #53565a !important;
+    border-color: #53565a !important;
+    border-width: 1px !important;
+    background-color: #fefefe !important;
+    transition: all 0.3s ease-out;
+    padding: 10px !important;
+    width: 45%;
+    cursor: pointer;
+}
+
+.modal-mayor-edad .modal-content .btn:focus-visible {
+    outline: 2px solid #53565a;
+    outline-offset: 2px;
+}
+
+.modal-mayor-edad .modal-content .btn:hover {
+    color: #fefefe !important;
+    background-color: #53565a !important;
+    transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 990px) {
+    .modal-mayor-edad .modal-content .titulo {
+        font-size: 2em;
+        line-height: normal;
+    }
+
+    .modal-mayor-edad .modal-buttons {
+        flex-direction: column;
+    }
+
+    .modal-mayor-edad .modal-content .btn {
+        width: 99%;
+    }
+
+    .modal-mayor-edad .modal-buttons button.btn.btn-aceptar {
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .modal-mayor-edad .modal-content {
+        width: 80vw;
+    }
+
+    .modal-mayor-edad .modal-content .titulo {
+        font-size: 1.5em;
+        line-height: normal;
+    }
+
+    .modal-mayor-edad .modal-content .subtitulo {
+        font-size: 1.1em;
+    }
+}
