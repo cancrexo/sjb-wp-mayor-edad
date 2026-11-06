@@ -1,7 +1,7 @@
 /* Modal mayor de edad — variables para retoques desde el tema */
 
 .modal-mayor-edad {
-    --sjb-me-overlay: rgba(0, 0, 0, 0.4);
+    --sjb-me-overlay: rgba(255, 255, 255, 0.7);
     --sjb-me-bg: #fefefe;
     --sjb-me-border: #888;
     --sjb-me-btn: #53565a;
@@ -71,11 +71,6 @@ body.sjb-mayor-edad-abierto {
     padding: 10px !important;
     width: 45%;
     cursor: pointer;
-}
-
-.modal-mayor-edad .modal-content .btn:focus-visible {
-    outline: 2px solid var(--sjb-me-btn);
-    outline-offset: 2px;
 }
 
 .modal-mayor-edad .modal-content .btn:hover {
