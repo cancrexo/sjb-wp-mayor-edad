@@ -1,6 +1,13 @@
 # Changelog
 
-Los cambios notables de SJB Aviso Mayor de Edad. La versión del plugin es la de la cabecera (`1.0.0`).
+Los cambios notables de SJB Aviso Mayor de Edad. La versión del plugin es la de la cabecera (`1.1.0`).
+
+## 1.1.0 — 2026-11-06
+
+- Plantillas sustituibles desde el tema (`sjb-wp-mayor-edad/modal.php` y `aviso-mayor-edad.css`).
+- Filtros `sjb_wp_mayor_edad_textos`, `sjb_wp_mayor_edad_cookie_name`, `sjb_wp_mayor_edad_cookie_days` y `sjb_wp_mayor_edad_reject_url`.
+- Variables CSS (`--sjb-me-*`) para retoques sin copiar todo el archivo.
+- El markup del modal sale de PHP; el JS solo gestiona cookie, foco y botones.
 
 ## 1.0.0 — 2026-11-06
 

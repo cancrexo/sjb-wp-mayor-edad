@@ -1,4 +1,15 @@
-/* Modal mayor de edad */
+/* Modal mayor de edad — variables para retoques desde el tema */
+
+.modal-mayor-edad {
+    --sjb-me-overlay: rgba(0, 0, 0, 0.4);
+    --sjb-me-bg: #fefefe;
+    --sjb-me-border: #888;
+    --sjb-me-btn: #53565a;
+    --sjb-me-btn-hover-fg: #fefefe;
+    --sjb-me-width: 40vw;
+    --sjb-me-width-narrow: 80vw;
+    --sjb-me-z: 100000;
+}
 
 body.sjb-mayor-edad-abierto {
     overflow: hidden;
@@ -10,11 +21,11 @@ body.sjb-mayor-edad-abierto {
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 100000;
+    z-index: var(--sjb-me-z);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--sjb-me-overlay);
 }
 
 .modal-mayor-edad .modal-content {
@@ -23,10 +34,10 @@ body.sjb-mayor-edad-abierto {
     justify-content: center;
     flex-wrap: wrap;
     box-sizing: border-box;
-    background-color: #fefefe;
+    background-color: var(--sjb-me-bg);
     padding: 20px;
-    border: 1px solid #888;
-    width: 40vw;
+    border: 1px solid var(--sjb-me-border);
+    width: var(--sjb-me-width);
     max-height: 90vh;
     overflow: auto;
 }
@@ -52,10 +63,10 @@ body.sjb-mayor-edad-abierto {
 }
 
 .modal-mayor-edad .modal-content .btn {
-    color: #53565a !important;
-    border-color: #53565a !important;
+    color: var(--sjb-me-btn) !important;
+    border-color: var(--sjb-me-btn) !important;
     border-width: 1px !important;
-    background-color: #fefefe !important;
+    background-color: var(--sjb-me-bg) !important;
     transition: all 0.3s ease-out;
     padding: 10px !important;
     width: 45%;
@@ -63,13 +74,13 @@ body.sjb-mayor-edad-abierto {
 }
 
 .modal-mayor-edad .modal-content .btn:focus-visible {
-    outline: 2px solid #53565a;
+    outline: 2px solid var(--sjb-me-btn);
     outline-offset: 2px;
 }
 
 .modal-mayor-edad .modal-content .btn:hover {
-    color: #fefefe !important;
-    background-color: #53565a !important;
+    color: var(--sjb-me-btn-hover-fg) !important;
+    background-color: var(--sjb-me-btn) !important;
     transition: all 0.3s ease-out;
 }
 
@@ -94,7 +105,7 @@ body.sjb-mayor-edad-abierto {
 
 @media screen and (max-width: 680px) {
     .modal-mayor-edad .modal-content {
-        width: 80vw;
+        width: var(--sjb-me-width-narrow);
     }
 
     .modal-mayor-edad .modal-content .titulo {

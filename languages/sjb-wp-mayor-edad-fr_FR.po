@@ -5,16 +5,16 @@ msgstr ""
 "Project-Id-Version: SJB Aviso Mayor de Edad 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sjb-wp-mayor-"
 "edad\n"
+"POT-Creation-Date: 2026-11-06T10:12:56+00:00\n"
+"PO-Revision-Date: 2026-11-06T09:48:09+00:00\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-06T09:48:09+00:00\n"
-"PO-Revision-Date: 2026-11-06T09:48:09+00:00\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: sjb-wp-mayor-edad\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin
@@ -40,18 +40,18 @@ msgstr ""
 msgid "Daniel \"Cancrexo\" Prol"
 msgstr ""
 
-#: sjb-wp-mayor-edad.php:128
+#: sjb-wp-mayor-edad.php:137
 msgid "You must be of legal age to access this site"
 msgstr "Vous devez être majeur pour accéder à ce site"
 
-#: sjb-wp-mayor-edad.php:129
+#: sjb-wp-mayor-edad.php:138
 msgid "Please confirm that you are over 18 years old"
 msgstr "Veuillez confirmer que vous avez plus de 18 ans"
 
-#: sjb-wp-mayor-edad.php:130
+#: sjb-wp-mayor-edad.php:139
 msgid "Yes, I am of legal age"
 msgstr "Oui, je suis majeur"
 
-#: sjb-wp-mayor-edad.php:131
+#: sjb-wp-mayor-edad.php:140
 msgid "No, I am underage"
 msgstr "Non, je suis mineur"

@@ -2,7 +2,7 @@
 
 Modal de verificación de mayoría de edad en todo el frontend. Si el visitante confirma que es mayor de 18 años, se guarda una cookie y el aviso no vuelve a salir. Si indica que es menor, se le envía fuera del sitio.
 
-Versión actual: **1.0.0**
+Versión actual: **1.1.0**
 
 Autor: Daniel "Cancrexo" Prol · [cancrexo@gmail.com](mailto:cancrexo@gmail.com)
 
@@ -37,7 +37,52 @@ Con la cookie ya puesta, no se cargan el CSS ni el JS.
 
 El foco entra en el botón de aceptar, el tabulador no sale de los dos botones y la página de detrás no hace scroll.
 
-Duración, nombre de cookie y URL de rechazo están en `sjb-wp-mayor-edad.php` (`COOKIE_DAYS`, `COOKIE_NAME` y `REJECT_URL`).
+Duración, nombre de cookie y URL de rechazo están en `sjb-wp-mayor-edad.php` (`COOKIE_DAYS`, `COOKIE_NAME` y `REJECT_URL`) y se pueden filtrar (ver más abajo).
+
+---
+
+## Personalizar (tema)
+
+Copia lo que quieras cambiar a una carpeta `sjb-wp-mayor-edad/` en el tema activo (hijo o padre). El plugin busca primero ahí y, si no hay archivo, usa el suyo.
+
+| Archivo en el tema | Efecto |
+|--------------------|--------|
+| `sjb-wp-mayor-edad/modal.php` | Sustituye el HTML del aviso |
+| `sjb-wp-mayor-edad/aviso-mayor-edad.css` | Sustituye por completo la hoja de estilos del plugin |
+
+La plantilla por defecto está en `templates/modal.php` del plugin. Recibe `$textos` con `titulo`, `subtitulo`, `txtBtnAceptar` y `txtBtnRechazar`. Conserva las clases `.modal-mayor-edad`, `.btn-aceptar` y `.btn-rechazar` si quieres que el JS siga funcionando.
+
+### Solo colores (sin copiar el CSS)
+
+En el CSS del tema puedes redefinir las variables del modal:
+
+```css
+.modal-mayor-edad {
+    --sjb-me-overlay: rgba(0, 0, 0, 0.55);
+    --sjb-me-bg: #ffffff;
+    --sjb-me-border: #222222;
+    --sjb-me-btn: #1a1a1a;
+}
+```
+
+### Filtros PHP
+
+```php
+add_filter('sjb_wp_mayor_edad_textos', function ($textos) {
+    $textos['titulo'] = 'Solo mayores de 18';
+    return $textos;
+});
+
+add_filter('sjb_wp_mayor_edad_reject_url', function () {
+    return 'https://www.example.com/';
+});
+
+add_filter('sjb_wp_mayor_edad_cookie_days', function () {
+    return 30;
+});
+```
+
+También existe `sjb_wp_mayor_edad_cookie_name` para el nombre de la cookie.
 
 ---
 
